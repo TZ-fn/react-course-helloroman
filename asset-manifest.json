@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/react-course-helloroman/static/css/main.9d1494d8.chunk.css",
+    "main.js": "/react-course-helloroman/static/js/main.e051e4a8.chunk.js",
+    "main.js.map": "/react-course-helloroman/static/js/main.e051e4a8.chunk.js.map",
+    "runtime-main.js": "/react-course-helloroman/static/js/runtime-main.dd56553d.js",
+    "runtime-main.js.map": "/react-course-helloroman/static/js/runtime-main.dd56553d.js.map",
+    "static/js/2.1b166961.chunk.js": "/react-course-helloroman/static/js/2.1b166961.chunk.js",
+    "static/js/2.1b166961.chunk.js.map": "/react-course-helloroman/static/js/2.1b166961.chunk.js.map",
+    "index.html": "/react-course-helloroman/index.html",
+    "precache-manifest.9de44a223e1992931671f28625444f96.js": "/react-course-helloroman/precache-manifest.9de44a223e1992931671f28625444f96.js",
+    "service-worker.js": "/react-course-helloroman/service-worker.js",
+    "static/css/main.9d1494d8.chunk.css.map": "/react-course-helloroman/static/css/main.9d1494d8.chunk.css.map",
+    "static/js/2.1b166961.chunk.js.LICENSE.txt": "/react-course-helloroman/static/js/2.1b166961.chunk.js.LICENSE.txt",
+    "static/media/danabramov.jpg": "/react-course-helloroman/static/media/danabramov.250c0286.jpg",
+    "static/media/kentcdodds.jpg": "/react-course-helloroman/static/media/kentcdodds.3a72cbe0.jpg",
+    "static/media/michaeljackson.jpg": "/react-course-helloroman/static/media/michaeljackson.090afebd.jpg",
+    "static/media/ryanflorence.jpg": "/react-course-helloroman/static/media/ryanflorence.5086cbe8.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dd56553d.js",
+    "static/js/2.1b166961.chunk.js",
+    "static/css/main.9d1494d8.chunk.css",
+    "static/js/main.e051e4a8.chunk.js"
+  ]
+}
