@@ -1,32 +1,75 @@
 .form__wrapper {
-  margin: 15px auto;
-  width: 300px;
+  width: 50%;
+  margin: 50px auto 100px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.form__wrapper h2 {
+  color: blue;
 }
 
 .form__input {
-  padding: 5px;
-  min-width: 300px;
-  margin: 15px auto;
+  color: #585858;
+  font-size: 16px;
   border: none;
-  border-bottom: 1px solid black;
+  line-height: 22px;
+  width: 100%;
+  background: none;
+  border-bottom: 2px solid #7d7d7d;
+  margin-bottom: 10px;
 }
 
 .form__textarea {
-  padding: 5px;
-  min-width: 300px;
+  min-width: 350px;
+  resize: none;
   min-height: 150px;
-  margin: 25px auto;
+  color: #585858;
+  font-size: 16px;
   border: none;
-  border-bottom: 1px solid black;
+  line-height: 22px;
+  background: none;
+  border-bottom: 2px solid #7d7d7d;
+}
+
+.form__label {
+  color: #7d7d7d;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  transition: 0.2s ease-out all;
+  font-size: 16px;
+}
+
+.form__form-item {
+  width: 100%;
+  margin: 24px 0;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.form__input:focus,
+.form__textarea:focus {
+  outline: 1px solid #7d7d7d;
+}
+
+.form__input:focus+.form__label,
+.form__textarea:focus+.form__label {
+  top: -22px;
+  font-size: 13px;
+}
+
+.form__input:not(:placeholder-shown)+.form__label,
+.form__textarea:not(:placeholder-shown)+.form__label {
+  top: -22px;
+  font-size: 13px;
 }
 
 .form__button {
   font-size: 12px;
-  align-self: flex-start;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 7px 12px;
   font-weight: 500;
   background: none;
   border: 2px solid blue;
