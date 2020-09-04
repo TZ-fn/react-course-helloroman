@@ -1,0 +1,33 @@
+.form__wrapper {
+  margin: 15px auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__input {
+  padding: 5px;
+  min-width: 300px;
+  margin: 15px auto;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form__textarea {
+  min-width: 300px;
+  min-height: 150px;
+  margin: 25px auto;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.form__button {
+  font-size: 12px;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-weight: 500;
+  background: none;
+  border: 2px solid blue;
+  color: blue;
+}
