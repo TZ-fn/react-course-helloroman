@@ -25,6 +25,8 @@ const ListItem = ({
         </p>
 
         <a
+          target='_blank'
+          rel="noopener noreferrer"
           href={twitterLink}
           className='listItem__button'>
           visit twitter page

@@ -34,16 +34,31 @@ class App extends React.Component {
   }
 
   addItem = (e) => {
+
     e.preventDefault();
-    console.log([...e.target].map(target => target.value))
+
+    const newItem = {
+      name: e.target[0].value,
+      twitterLink: e.target[1].value,
+      image: e.target[2].value,
+      description: e.target[3].value,
+    };
+
+    this.setState(prevState => ({
+      items: [...prevState.items, newItem],
+    }))
+
+    e.target.reset();
   }
 
   render() {
     return (
+
       <div>
         <ListWrapper
           items={this.state.items}
         />
+
         <Form
           submitFn={this.addItem}
         />
