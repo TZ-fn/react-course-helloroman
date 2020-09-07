@@ -1,16 +1,16 @@
-.form__wrapper {
+.wrapper {
   width: 50%;
   margin: 50px auto 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  h2 {
+    color: blue;
+  }
 }
 
-.form__wrapper h2 {
-  color: blue;
-}
-
-.form__input {
+.input {
   color: #585858;
   font-size: 16px;
   border: none;
@@ -21,7 +21,7 @@
   margin-bottom: 10px;
 }
 
-.form__textarea {
+.textarea {
   min-width: 350px;
   resize: none;
   min-height: 150px;
@@ -33,7 +33,7 @@
   border-bottom: 2px solid #7d7d7d;
 }
 
-.form__label {
+.label {
   color: #7d7d7d;
   position: absolute;
   top: 3px;
@@ -42,31 +42,31 @@
   font-size: 16px;
 }
 
-.form__form-item {
+.formItem {
   width: 100%;
   margin: 24px 0;
   position: relative;
   flex-shrink: 0;
 }
 
-.form__input:focus,
-.form__textarea:focus {
+.input:focus,
+.textarea:focus {
   outline: 1px solid #7d7d7d;
 }
 
-.form__input:focus+.form__label,
-.form__textarea:focus+.form__label {
+.input:focus+.label,
+.textarea:focus+.label {
   top: -22px;
   font-size: 13px;
 }
 
-.form__input:not(:placeholder-shown)+.form__label,
-.form__textarea:not(:placeholder-shown)+.form__label {
+.input:not(:placeholder-shown)+.label,
+.textarea:not(:placeholder-shown)+.label {
   top: -22px;
   font-size: 13px;
 }
 
-.form__button {
+.button {
   font-size: 12px;
   text-decoration: none;
   padding: 7px 12px;

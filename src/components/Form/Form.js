@@ -1,32 +1,32 @@
 import React from 'react';
-import './Form.css';
+import styles from './Form.module.scss';
 
 const Form = ({ submitFn }) => (
-  <div className="form__wrapper">
+  <div className={styles.wrapper}>
     <h2>Add a new twitter account</h2>
-    <form onSubmit={submitFn} className='form__form'>
+    <form onSubmit={submitFn} className={styles.form}>
 
-      <div className="form__form-item">
-        <input type="text" placeholder="Name" name="name" className='form__input' />
-        <label htmlFor="name" className="form__label">Name</label>
+      <div className={styles.formItem}>
+        <input type="text" placeholder="Name" name="name" className={styles.input} />
+        <label htmlFor="name" className={styles.label}>Name</label>
       </div>
 
-      <div className="form__form-item">
-        <input type="text" placeholder="Link" name="link" className='form__input' />
-        <label htmlFor="link" className="form__label">Link</label>
+      <div className={styles.formItem}>
+        <input type="text" placeholder="Link" name="link" className={styles.input} />
+        <label htmlFor="link" className={styles.label}>Link</label>
       </div>
 
-      <div className="form__form-item">
-        <input type="text" placeholder="Image" name="image" className='form__input' />
-        <label htmlFor="image" className="form__label">Image</label>
+      <div className={styles.formItem}>
+        <input type="text" placeholder="Image" name="image" className={styles.input} />
+        <label htmlFor="image" className={styles.label}>Image</label>
       </div>
 
-      <div className="form__form-item">
-        <textarea placeholder="Description" name="description" className='form__textarea' />
-        <label htmlFor="description" className="form__label">Description</label>
+      <div className={styles.formItem}>
+        <textarea placeholder="Description" name="description" className={styles.textarea} />
+        <label htmlFor="description" className={styles.label}>Description</label>
       </div>
 
-      <button type="submit" className='form__button'>Add a new item</button>
+      <button type="submit" className={styles.button}>Add a new item</button>
     </form>
   </div>
 );
