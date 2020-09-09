@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './ListItem.module.scss';
 import PropTypes from 'prop-types';
 import Button from '../../Button/Button';
+import Title from '../../Title/Title'
 
 const ListItem = ({
   name,
@@ -17,9 +18,9 @@ const ListItem = ({
       />
 
       <div>
-        <h2 className={styles.name}>
+        <Title>
           {name}
-        </h2>
+        </Title>
 
         <p className={styles.description}>
           {description}
