@@ -8,7 +8,7 @@ const Input = ({ tag: Tag, name, label, maxLength }) => (
     <Tag
       type='text'
       name={name}
-      className={Tag === 'text-area' ? styles.textarea : styles.input}
+      className={Tag === 'textarea' ? styles.textarea : styles.input}
       maxLength={maxLength}
       placeholder=' '
       required
