@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Form.module.scss';
-import Input from '../Input/Input'
+import Input from '../Input/Input';
+import Button from '../Button/Button';
 
 const Form = ({ submitFn }) => (
   <div className={styles.wrapper}>
@@ -30,7 +31,7 @@ const Form = ({ submitFn }) => (
         label='Description'
       />
 
-      <button type='submit' className={styles.button}>Add a new item</button>
+      <Button>Add a new item</Button>
     </form>
   </div>
 );
