@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ListWrapper from './components/ListWrapper/ListWrapper';
+import List from './components/List/List';
 import Form from './components/Form/Form';
 
 const initialStateItems = [{
@@ -43,7 +43,7 @@ class App extends React.Component {
     return (
 
       <div>
-        <ListWrapper
+        <List
           items={this.state.items}
         />
 
