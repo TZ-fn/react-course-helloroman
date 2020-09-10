@@ -11,7 +11,7 @@ const Input = ({ tag: Tag, name, label, maxLength }) => (
       className={Tag === 'textarea' ? styles.textarea : styles.input}
       maxLength={maxLength}
       placeholder=' '
-      required
+    // required
     />
 
     <label
