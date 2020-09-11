@@ -5,7 +5,8 @@ import NotesView from '../NotesView/NotesView';
 import TwittersView from '../TwittersView/TwittersView';
 import {
   BrowserRouter,
-  Route
+  Route,
+  Switch
 } from 'react-router-dom'
 
 const initialStateItems = [{
@@ -49,14 +50,15 @@ class Root extends React.Component {
     return (
       <BrowserRouter>
         <>
-          <Route path='/' component={TwittersView} />
-          <Route path='/articles' component={ArticlesView} />
-          <Route path='/notes' component={NotesView} />
+          <Switch>
+            <Route exact path='/' component={TwittersView} />
+            <Route path='/articles' component={ArticlesView} />
+            <Route path='/notes' component={NotesView} />
+          </Switch>
         </>
       </BrowserRouter>
     )
   }
 }
-
 
 export default Root;
