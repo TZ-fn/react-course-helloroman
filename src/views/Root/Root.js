@@ -8,6 +8,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
+import Header from '../../components/Header/Header';
 
 const initialStateItems = [{
   image: 'https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/original/oapgW_Fp_400x400.jpg',
@@ -50,6 +51,7 @@ class Root extends React.Component {
     return (
       <BrowserRouter>
         <>
+          <Header />
           <Switch>
             <Route exact path='/' component={TwittersView} />
             <Route path='/articles' component={ArticlesView} />
