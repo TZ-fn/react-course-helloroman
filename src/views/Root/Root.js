@@ -49,17 +49,30 @@ class Root extends React.Component {
     e.target.reset();
   }
 
+  openModal = () => {
+    this.setState({
+      isModalOpen: true,
+    })
+  }
+
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false,
+    })
+  }
+
   render() {
+    const { isModalOpen } = this.state;
     return (
       <BrowserRouter>
         <>
-          <Header />
+          <Header openModalFn={this.openModal} />
           <Switch>
             <Route exact path='/' component={TwittersView} />
             <Route path='/articles' component={ArticlesView} />
             <Route path='/notes' component={NotesView} />
           </Switch>
-          <Modal />
+          {isModalOpen && <Modal closeModalFn={this.closeModal} />}
         </>
       </BrowserRouter>
     )
