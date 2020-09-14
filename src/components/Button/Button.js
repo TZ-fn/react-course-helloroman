@@ -1,25 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './Button.module.scss'
 
-const Button = ({ children, href }) => (
-  <>
-    {
-      href ? (
-        <a
-          target='_blank'
-          rel='noopener noreferrer'
-          href={href}
-          className={styles.button}
-        >
-          {children}
-        </a>
-      ) : (
-          <button className={styles.button}>
+const Button = ({ children, href, secondary }) => {
+  const buttonClass = secondary ? styles.secondary : styles.button;
+
+  return (
+    <>
+      {
+        href ? (
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href={href}
+            className={buttonClass}
+          >
             {children}
-          </button>
-        )
-    }
-  </>
-);
+          </a>
+        ) : (
+            <button className={buttonClass}>
+              {children}
+            </button>
+          )
+      }
+    </>
+  )
+};
+
+Button.propTypes = {
+  children: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  secondary: PropTypes.bool,
+}
+
+Button.defaultProps = {
+  secondary: false,
+}
 
 export default Button;

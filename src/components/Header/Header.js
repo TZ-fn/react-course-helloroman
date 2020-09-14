@@ -6,9 +6,9 @@ import logoImage from '../../assets/images/logo.svg';
 
 const Header = () => (
   <header className={styles.wrapper}>
-    <img src={logoImage} alt='FavNote logo' />
+    <img src={logoImage} alt='FavNote logo' className='logo' />
     <HeaderNavigation />
-    <Button>new item</Button>
+    <Button secondary>new item</Button>
   </header>
 );
 
