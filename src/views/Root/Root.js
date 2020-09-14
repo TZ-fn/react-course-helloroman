@@ -9,6 +9,7 @@ import {
   Switch
 } from 'react-router-dom'
 import Header from '../../components/Header/Header';
+import Modal from '../../components/Modal/Modal';
 
 const initialStateItems = [{
   image: 'https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/original/oapgW_Fp_400x400.jpg',
@@ -27,6 +28,7 @@ const initialStateItems = [{
 class Root extends React.Component {
   state = {
     items: [...initialStateItems],
+    isModalOpen: false,
   }
 
   addItem = (e) => {
@@ -57,6 +59,7 @@ class Root extends React.Component {
             <Route path='/articles' component={ArticlesView} />
             <Route path='/notes' component={NotesView} />
           </Switch>
+          <Modal />
         </>
       </BrowserRouter>
     )
