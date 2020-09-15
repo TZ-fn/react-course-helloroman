@@ -4,7 +4,7 @@ import styles from './Modal.module.scss';
 
 const Modal = ({ closeModalFn }) => (
   <div className={styles.wrapper}>
-    <button onClick={closeModalFn}>close</button>
+    <button onClick={closeModalFn} className={styles.closeButton}></button>
     <Form />
   </div>
 );

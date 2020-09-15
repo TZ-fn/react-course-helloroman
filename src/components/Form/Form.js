@@ -4,37 +4,89 @@ import Input from '../Input/Input';
 import Button from '../Button/Button';
 import Title from '../Title/Title'
 
-const Form = ({ submitFn }) => (
-  <div className={styles.wrapper}>
-    <Title>Add a new twitter account</Title>
-    <form autoComplete='off' onSubmit={submitFn} className={styles.form}>
-      <Input
-        name='name'
-        label='Name'
-        maxLength={40}
-      />
+const formTypes = {
+  twitter: 'twitter',
+  article: 'article',
+  note: 'note',
+}
 
-      <Input
-        name='link'
-        label='Twitter link'
-        maxLength={40}
-      />
+const formTypesDescriptions = {
+  twitter: 'favourite Twitter account',
+  article: 'article',
+  note: 'note',
+}
 
-      <Input
-        name='image'
-        label='Image'
-        maxLength={40}
-      />
+class Form extends React.Component {
+  state = {
+    activeOption: formTypes.twitter,
+  }
 
-      <Input
-        tag='textarea'
-        name='description'
-        label='Description'
-      />
+  handleFormTypeChange = (type) => {
+    this.setState({
+      activeOption: type,
+    })
+  }
 
-      <Button>Add a new item</Button>
-    </form>
-  </div>
-);
+  render() {
+    return (
+      <div className={styles.wrapper}>
+        <Title>Add a new {formTypesDescriptions[this.state.activeOption]}</Title>
+        <form autoComplete='off' onSubmit={this.props.submitFn} className={styles.form}>
+
+          <input
+            id={formTypes.twitter}
+            type='radio'
+            checked={this.state.activeOption === formTypes.twitter}
+            onChange={() => this.handleFormTypeChange(formTypes.twitter)}
+          >
+          </input>
+          <label htmlFor="formTypes.twitter">Twitter</label>
+          <input
+            id={formTypes.article}
+            type='radio'
+            checked={this.state.activeOption === formTypes.article}
+            onChange={() => this.handleFormTypeChange(formTypes.article)}
+          >
+          </input>
+          <label htmlFor="formTypes.article">Article</label>
+          <input
+            id={formTypes.note}
+            type='radio'
+            checked={this.state.activeOption === formTypes.note}
+            onChange={() => this.handleFormTypeChange(formTypes.note)}
+          >
+          </input >
+          <label htmlFor="formTypes.note">Note</label>
+
+          <Input
+            name='name'
+            label='Name'
+            maxLength={40}
+          />
+
+          <Input
+            name='link'
+            label='Twitter link'
+            maxLength={40}
+          />
+
+          <Input
+            name='image'
+            label='Image'
+            maxLength={40}
+          />
+
+          <Input
+            tag='textarea'
+            name='description'
+            label='Description'
+          />
+
+          <Button>Add a new item</Button>
+        </form >
+      </div >
+    )
+  }
+}
 
 export default Form;
