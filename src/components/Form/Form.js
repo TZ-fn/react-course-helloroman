@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Form.module.scss';
 import Input from '../Input/Input';
-import Radio from '../Radio/Radio';
+import Radio from './Radio';
 import Button from '../Button/Button';
 import Title from '../Title/Title'
 
