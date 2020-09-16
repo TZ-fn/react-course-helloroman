@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Radio.module.scss';
 
-const Radio = ({ id, checked, changeFn }) => (
+const Radio = ({ id, checked, changeFn, children }) => (
   <>
     <input
       id={id}
@@ -14,7 +14,7 @@ const Radio = ({ id, checked, changeFn }) => (
       htmlFor={id}
       className={styles.radioLabel}
     >
-      {id}
+      {children}
     </label>
   </>
 );
