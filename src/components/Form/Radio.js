@@ -3,17 +3,14 @@ import styles from './Radio.module.scss';
 
 const Radio = ({ id, checked, changeFn, children }) => (
   <>
-    <input
-      id={id}
-      checked={checked}
-      type="radio"
-      className={styles.radio}
-      onChange={changeFn}
-    />
-    <label
-      htmlFor={id}
-      className={styles.radioLabel}
-    >
+    <label className={styles.radioLabel} >
+      <input
+        id={id}
+        checked={checked}
+        type="radio"
+        className={styles.radio}
+        onChange={changeFn}
+      />
       {children}
     </label>
   </>
