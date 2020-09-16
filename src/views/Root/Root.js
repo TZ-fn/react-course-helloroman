@@ -1,5 +1,6 @@
 import React from 'react';
 import './Root.css';
+import AppContext from '../../context';
 import ArticlesView from '../ArticlesView/ArticlesView';
 import NotesView from '../NotesView/NotesView';
 import TwittersView from '../TwittersView/TwittersView';
@@ -65,7 +66,7 @@ class Root extends React.Component {
     const { isModalOpen } = this.state;
     return (
       <BrowserRouter>
-        <>
+        <AppContext.Provider value={this.state}>
           <Header openModalFn={this.openModal} />
           <Switch>
             <Route exact path='/' component={TwittersView} />
@@ -73,7 +74,7 @@ class Root extends React.Component {
             <Route path='/notes' component={NotesView} />
           </Switch>
           {isModalOpen && <Modal closeModalFn={this.closeModal} />}
-        </>
+        </AppContext.Provider>
       </BrowserRouter>
     )
   }
