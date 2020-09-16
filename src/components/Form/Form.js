@@ -34,20 +34,28 @@ class Form extends React.Component {
         <Title>Add a new {formTypesDescriptions[this.state.activeOption]}</Title>
         <form autoComplete='off' onSubmit={this.props.submitFn} className={styles.form}>
 
-          <div className={styles.formOptionsWrapper}>
-            <Radio
-              id={formTypes.twitter}
-              checked={this.state.activeOption === formTypes.twitter}
-            />
-            <Radio
-              id={formTypes.article}
-              checked={this.state.activeOption === formTypes.article}
-            />
-            <Radio
-              id={formTypes.note}
-              checked={this.state.activeOption === formTypes.note}
-            />
-            {/* <input
+          <Radio
+            id={formTypes.twitter}
+            checked={this.state.activeOption === formTypes.twitter}
+            changeFn={() => this.handleFormTypeChange(formTypes.twitter)}
+          >
+            Twitter
+            </Radio>
+          <Radio
+            id={formTypes.article}
+            checked={this.state.activeOption === formTypes.article}
+            changeFn={() => this.handleFormTypeChange(formTypes.article)}
+          >
+            Article
+            </Radio>
+          <Radio
+            id={formTypes.note}
+            checked={this.state.activeOption === formTypes.note}
+            changeFn={() => this.handleFormTypeChange(formTypes.note)}
+          >
+            Note
+            </Radio>
+          {/* <input
               id={formTypes.twitter}
               type='radio'
               checked={this.state.activeOption === formTypes.twitter}
@@ -71,9 +79,6 @@ class Form extends React.Component {
             >
             </input >
             <label htmlFor="formTypes.note">Note</label> */}
-          </div>
-
-
           <Input
             name='name'
             label='Name'
