@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Form.module.scss';
+import AppContext from '../../context';
 import Input from '../Input/Input';
 import Radio from './Radio';
 import Button from '../Button/Button';
@@ -19,74 +20,96 @@ const formTypesDescriptions = {
 
 class Form extends React.Component {
   state = {
-    activeOption: formTypes.twitter,
+    formType: formTypes.twitter,
+    title: '',
+    link: '',
+    image: '',
+    description: '',
   }
 
   handleFormTypeChange = (type) => {
     this.setState({
-      activeOption: type,
+      formType: type,
+    })
+  }
+
+  handleInputChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value,
     })
   }
 
   render() {
-    const { activeOption } = this.state;
+    const { formType } = this.state;
 
     return (
-      <div className={styles.wrapper}>
-        <Title>Add a new {formTypesDescriptions[activeOption]}</Title>
-        <form autoComplete='off' onSubmit={this.props.submitFn} className={styles.form}>
+      <AppContext.Consumer>
+        {(context) => (
+          <div className={styles.wrapper}>
+            <Title>Add a new {formTypesDescriptions[formType]}</Title>
+            <form autoComplete='off' onSubmit={(e) => context.addItem(e, this.state)} className={styles.form}>
 
-          <Radio
-            id={formTypes.twitter}
-            checked={activeOption === formTypes.twitter}
-            changeFn={() => this.handleFormTypeChange(formTypes.twitter)}
-          >
-            Twitter
+              <Radio
+                id={formTypes.twitter}
+                checked={formType === formTypes.twitter}
+                changeFn={() => this.handleFormTypeChange(formTypes.twitter)}
+              >
+                Twitter
             </Radio>
-          <Radio
-            id={formTypes.article}
-            checked={activeOption === formTypes.article}
-            changeFn={() => this.handleFormTypeChange(formTypes.article)}
-          >
-            Article
+              <Radio
+                id={formTypes.article}
+                checked={formType === formTypes.article}
+                changeFn={() => this.handleFormTypeChange(formTypes.article)}
+              >
+                Article
             </Radio>
-          <Radio
-            id={formTypes.note}
-            checked={activeOption === formTypes.note}
-            changeFn={() => this.handleFormTypeChange(formTypes.note)}
-          >
-            Note
+              <Radio
+                id={formTypes.note}
+                checked={formType === formTypes.note}
+                changeFn={() => this.handleFormTypeChange(formTypes.note)}
+              >
+                Note
             </Radio>
 
-          <Input
-            name='name'
-            label={activeOption === formTypes.twitter ? 'Twitter Name' : 'Title'}
-            maxLength={40}
-          />
+              <Input
+                name='title'
+                label={formType === formTypes.twitter ? 'Twitter Name' : 'Title'}
+                maxLength={40}
+                onChange={this.handleInputChange}
+                value={this.state.title}
+              />
 
-          {activeOption !== formTypes.note ?
-            <Input
-              name='link'
-              label={activeOption === formTypes.twitter ? 'Twitter Link' : 'Link'}
-              maxLength={40}
-            /> : null}
+              {formType !== formTypes.note ?
+                <Input
+                  name='link'
+                  label={formType === formTypes.twitter ? 'Twitter Link' : 'Link'}
+                  maxLength={40}
+                  onChange={this.handleInputChange}
+                  value={this.state.link}
+                /> : null}
 
-          {activeOption === formTypes.twitter ?
-            <Input
-              name='image'
-              label='Image'
-              maxLength={40}
-            /> : null}
+              {formType === formTypes.twitter ?
+                <Input
+                  name='image'
+                  label='Image'
+                  maxLength={40}
+                  onChange={this.handleInputChange}
+                  value={this.state.image}
+                /> : null}
 
-          <Input
-            tag='textarea'
-            name='description'
-            label='Description'
-          />
+              <Input
+                tag='textarea'
+                name='description'
+                label='Description'
+                onChange={this.handleInputChange}
+                value={this.state.description}
+              />
 
-          <Button>Add a new item</Button>
-        </form >
-      </div >
+              <Button>Add a new item</Button>
+            </form >
+          </div >
+        )}
+      </AppContext.Consumer>
     )
   }
 }

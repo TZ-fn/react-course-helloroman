@@ -12,42 +12,22 @@ import {
 import Header from '../../components/Header/Header';
 import Modal from '../../components/Modal/Modal';
 
-const initialStateItems = [{
-  image: 'https://d2eip9sf3oo6c2.cloudfront.net/instructors/avatars/000/000/032/original/oapgW_Fp_400x400.jpg',
-  name: 'Dan Abramov',
-  description: 'Working on @reactjs. The demo guy.',
-  twitterLink: 'https://twitter.com/dan_abramov',
-},
-{
-  image: 'https://avatars2.githubusercontent.com/u/100200?s=460&u=27ba6e62a03c423018655aafaa5333e9d4f761cf&v=4',
-  name: 'Ryan Florence',
-  description: 'Making React accessible for users and developers at https://reach.tech . Online learning, workshops, OSS, and consulting.',
-  twitterLink: 'https://twitter.com/ryanflorence',
-},
-]
-
 class Root extends React.Component {
   state = {
-    items: [...initialStateItems],
+    twitter: [],
+    article: [],
+    note: [],
     isModalOpen: false,
   }
 
-  addItem = (e) => {
-
+  addItem = (e, newItem) => {
     e.preventDefault();
 
-    const newItem = {
-      name: e.target[0].value,
-      twitterLink: e.target[1].value,
-      image: e.target[2].value,
-      description: e.target[3].value,
-    };
-
     this.setState(prevState => ({
-      items: [...prevState.items, newItem],
-    }))
+      [newItem.formType]: [...prevState[newItem.formType], newItem],
+    }));
 
-    e.target.reset();
+    this.closeModal();
   }
 
   openModal = () => {
@@ -62,11 +42,18 @@ class Root extends React.Component {
     })
   }
 
+
   render() {
+
+    const contextElements = {
+      ...this.state,
+      addItem: this.addItem,
+    };
     const { isModalOpen } = this.state;
+
     return (
       <BrowserRouter>
-        <AppContext.Provider value={this.state}>
+        <AppContext.Provider value={contextElements}>
           <Header openModalFn={this.openModal} />
           <Switch>
             <Route exact path='/' component={TwittersView} />
