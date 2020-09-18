@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/react-course-helloroman/static/css/main.23073035.chunk.css",
-    "main.js": "/react-course-helloroman/static/js/main.22268e79.chunk.js",
-    "main.js.map": "/react-course-helloroman/static/js/main.22268e79.chunk.js.map",
+    "main.css": "/react-course-helloroman/static/css/main.bb19430e.chunk.css",
+    "main.js": "/react-course-helloroman/static/js/main.d655515e.chunk.js",
+    "main.js.map": "/react-course-helloroman/static/js/main.d655515e.chunk.js.map",
     "runtime-main.js": "/react-course-helloroman/static/js/runtime-main.dd56553d.js",
     "runtime-main.js.map": "/react-course-helloroman/static/js/runtime-main.dd56553d.js.map",
-    "static/js/2.c762a265.chunk.js": "/react-course-helloroman/static/js/2.c762a265.chunk.js",
-    "static/js/2.c762a265.chunk.js.map": "/react-course-helloroman/static/js/2.c762a265.chunk.js.map",
+    "static/js/2.00e91e1d.chunk.js": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js",
+    "static/js/2.00e91e1d.chunk.js.map": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js.map",
     "index.html": "/react-course-helloroman/index.html",
-    "precache-manifest.d6e73a3f05ebebaa37d86de17cbaa4d9.js": "/react-course-helloroman/precache-manifest.d6e73a3f05ebebaa37d86de17cbaa4d9.js",
+    "precache-manifest.78c4d996db61dce97381df7a1e68c537.js": "/react-course-helloroman/precache-manifest.78c4d996db61dce97381df7a1e68c537.js",
     "service-worker.js": "/react-course-helloroman/service-worker.js",
-    "static/css/main.23073035.chunk.css.map": "/react-course-helloroman/static/css/main.23073035.chunk.css.map",
-    "static/js/2.c762a265.chunk.js.LICENSE.txt": "/react-course-helloroman/static/js/2.c762a265.chunk.js.LICENSE.txt"
+    "static/css/main.bb19430e.chunk.css.map": "/react-course-helloroman/static/css/main.bb19430e.chunk.css.map",
+    "static/js/2.00e91e1d.chunk.js.LICENSE.txt": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/react-course-helloroman/static/media/logo.80937055.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd56553d.js",
-    "static/js/2.c762a265.chunk.js",
-    "static/css/main.23073035.chunk.css",
-    "static/js/main.22268e79.chunk.js"
+    "static/js/2.00e91e1d.chunk.js",
+    "static/css/main.bb19430e.chunk.css",
+    "static/js/main.d655515e.chunk.js"
   ]
 }
