@@ -8,16 +8,16 @@ const ListItem = ({
   title,
   description,
   link,
-  image
+  image,
+  formType,
 }) => {
-  const ImageTag = image ? "img" : "div";
 
   return (
     <li className={styles.wrapper}>
 
-      {image && <ImageTag
-        src={image}
-        className={image ? styles.image : styles.imageNone}
+      {image && <img
+        src={image || 'https://unsplash.it/200/200'}
+        className={styles.image}
         alt={title}
       />}
 
@@ -32,7 +32,7 @@ const ListItem = ({
 
         {link &&
           <Button href={link}>
-            visit twitter page
+            visit {formType} page
         </Button>}
 
       </div>
@@ -49,7 +49,6 @@ ListItem.propTypes = {
 
 ListItem.defaultProps = {
   link: null,
-  image: null,
 }
 
 export default ListItem;

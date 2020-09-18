@@ -74,7 +74,6 @@ class Form extends React.Component {
               <Input
                 name='title'
                 label={formType === formTypes.twitter ? 'Twitter Name' : 'Title'}
-                maxLength={40}
                 onChange={this.handleInputChange}
                 value={this.state.title}
               />
@@ -83,7 +82,6 @@ class Form extends React.Component {
                 <Input
                   name='link'
                   label={formType === formTypes.twitter ? 'Twitter Link' : 'Link'}
-                  maxLength={40}
                   onChange={this.handleInputChange}
                   value={this.state.link}
                 /> : null}
@@ -92,7 +90,6 @@ class Form extends React.Component {
                 <Input
                   name='image'
                   label='Image'
-                  maxLength={40}
                   onChange={this.handleInputChange}
                   value={this.state.image}
                 /> : null}

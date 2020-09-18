@@ -12,7 +12,7 @@ const List = ({ items }) => (
         />
       ))}
     </ul>) : (
-        <h1 className={styles.noItems}>There is nothing here yet, please add some items! ❤️</h1>
+        <h1 className={styles.noItems}>There is nothing here yet, please add some items! <span role='image'>❤️</span></h1>
       )}
   </>
 );

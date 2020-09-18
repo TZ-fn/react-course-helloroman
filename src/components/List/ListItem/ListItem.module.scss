@@ -12,7 +12,7 @@
 
 .wrapper {
   list-style: none;
-  padding: 50px 30px;
+  padding: 0 30px 50px 0;
   display: flex;
   align-items: center;
   position: relative;
@@ -25,13 +25,6 @@
   width: 150px;
   height: 150px;
   border-radius: 50%;
-}
-
-.imageNone {
-  @extend .image;
-
-  background: url('https://unsplash.it/200/200') no-repeat;
-  background-size: cover;
 }
 
 .description {
