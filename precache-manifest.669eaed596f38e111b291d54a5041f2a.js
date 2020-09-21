@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f82c8a49b46a7d4162f4446b7ac0ea5f",
+    "revision": "1270eabb94fa141aea8e96a7ff9fec02",
     "url": "/react-course-helloroman/index.html"
   },
   {
-    "revision": "48fc9707a0f5cf3827aa",
-    "url": "/react-course-helloroman/static/css/main.bb19430e.chunk.css"
+    "revision": "7af4166406b14a1cbbd0",
+    "url": "/react-course-helloroman/static/css/main.cf747a69.chunk.css"
   },
   {
     "revision": "9e154d908733179c3793",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "48fc9707a0f5cf3827aa",
-    "url": "/react-course-helloroman/static/js/main.d655515e.chunk.js"
+    "revision": "7af4166406b14a1cbbd0",
+    "url": "/react-course-helloroman/static/js/main.fdf23d67.chunk.js"
   },
   {
     "revision": "a1d0b898a8d90443b835",

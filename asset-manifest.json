@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/react-course-helloroman/static/css/main.bb19430e.chunk.css",
-    "main.js": "/react-course-helloroman/static/js/main.d655515e.chunk.js",
-    "main.js.map": "/react-course-helloroman/static/js/main.d655515e.chunk.js.map",
+    "main.css": "/react-course-helloroman/static/css/main.cf747a69.chunk.css",
+    "main.js": "/react-course-helloroman/static/js/main.fdf23d67.chunk.js",
+    "main.js.map": "/react-course-helloroman/static/js/main.fdf23d67.chunk.js.map",
     "runtime-main.js": "/react-course-helloroman/static/js/runtime-main.dd56553d.js",
     "runtime-main.js.map": "/react-course-helloroman/static/js/runtime-main.dd56553d.js.map",
     "static/js/2.00e91e1d.chunk.js": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js",
     "static/js/2.00e91e1d.chunk.js.map": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js.map",
     "index.html": "/react-course-helloroman/index.html",
-    "precache-manifest.78c4d996db61dce97381df7a1e68c537.js": "/react-course-helloroman/precache-manifest.78c4d996db61dce97381df7a1e68c537.js",
+    "precache-manifest.669eaed596f38e111b291d54a5041f2a.js": "/react-course-helloroman/precache-manifest.669eaed596f38e111b291d54a5041f2a.js",
     "service-worker.js": "/react-course-helloroman/service-worker.js",
-    "static/css/main.bb19430e.chunk.css.map": "/react-course-helloroman/static/css/main.bb19430e.chunk.css.map",
+    "static/css/main.cf747a69.chunk.css.map": "/react-course-helloroman/static/css/main.cf747a69.chunk.css.map",
     "static/js/2.00e91e1d.chunk.js.LICENSE.txt": "/react-course-helloroman/static/js/2.00e91e1d.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/react-course-helloroman/static/media/logo.80937055.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dd56553d.js",
     "static/js/2.00e91e1d.chunk.js",
-    "static/css/main.bb19430e.chunk.css",
-    "static/js/main.d655515e.chunk.js"
+    "static/css/main.cf747a69.chunk.css",
+    "static/js/main.fdf23d67.chunk.js"
   ]
 }
